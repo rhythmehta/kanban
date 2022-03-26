@@ -1,0 +1,96 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="container">
+    <div class="column" style="width: auto;">
+        <span class="cardtitle addtask">Add Task</span>
+        <div class="card addtask">
+            <form action="{{url_for('add_todo')}}" method="POST">
+                <div>
+                    <input type="text" name="title" placeholder="Task Title">
+                    <input type="text" name="description" placeholder="Task description" style="height: 11rem;">
+                </div>
+                <div>
+                    <input type="date" name="deadline" placeholder="Due date">
+                    <input type="submit" name="post" value="+">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="column">
+        <span class="cardtitle todo">To-Do</span>
+        <div class="card todo">
+            {% for todo in todos %}
+            <div class="task">
+                <div class="item">
+                    <button class="dropbtn">{{ todo.title }}</button>
+                    <div class="desc-content">
+                        <p>{{todo.desc}}</p>
+                        <p>Due: {{todo.due.strftime('%Y-%m-%d')}}</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <button class="options">⇆</button>
+                    <div class="options-list">
+                        <a href="{{ url_for('inprogress', todo_id=todo.id) }}" class="inprogress">Move to in progress</a>
+                        <a href="{{ url_for('completed', todo_id=todo.id) }}" class="completed">Mark as Complete</a>
+                        <a href="{{ url_for('delete', todo_id=todo.id) }}"
+                        class="delete">Delete Task</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="column">
+        <span class="cardtitle inprogress">In progress</span>
+        <div class="card inprogress">
+            {% for inprogress in dos %}
+            <div class="task">
+                <div class="item">
+                    <button class="dropbtn">{{ inprogress.title }}</button>
+                    <div class="desc-content">
+                        <p>{{inprogress.desc}}</p>
+                        <p>Due: {{inprogress.due.strftime('%Y-%m-%d')}}</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <button class="options">⇆</button>
+                    <div class="options-list">
+                        <a href="{{ url_for('todo', todo_id=inprogress.id) }}" class="todo">Move to To-Do</a>
+                        <a href="{{ url_for('completed', todo_id=inprogress.id) }}" class="completed">Mark as Complete</a>
+                        <a href="{{ url_for('delete', todo_id=inprogress.id) }}" class="delete">Delete Task</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="column">
+        <span class="cardtitle completed">Completed</span>
+        <div class="card completed">
+            {% for completed in dones %}
+            <div class="task">
+                <div class="item">
+                    <button class="dropbtn">{{ completed.title }}</button>
+                    <div class="desc-content">
+                        <p>{{completed.desc}}</p>
+                        <p>Due: {{completed.due.strftime('%Y-%m-%d')}}</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <button class="options">⇆</button>
+                    <div class="options-list">
+                        <a href="{{ url_for('todo', todo_id=completed.id) }}" class="todo">Move to To-do</a>
+                        <a href="{{ url_for('inprogress', todo_id=completed.id) }}" class="inprogress">Move to in progress</a>
+                        <a href="{{ url_for('delete', todo_id=completed.id) }}"
+                        class="delete">Delete Task</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

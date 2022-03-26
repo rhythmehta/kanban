@@ -1,0 +1,70 @@
+{% extends "base.html" %} {% block content %}
+
+<!--Registration form via WTForm-->
+
+<div class="container">
+  <form method="POST" action="">
+    {{form.hidden_tag()}}
+    <fieldset class="column">
+      <h3>Try out the new Kanban Board!</h3>
+      
+      <div>
+        {% if form.username.errors %}
+        {{form.username()}}
+        <div class="alert">
+          {% for error in form.username.errors %}
+          <span>{{error}}</span>
+          {% endfor %}
+        </div>
+        {% else %}
+        {{form.username(placeholder="Username")}}
+        {% endif %}
+      </div>
+
+      <div>
+        {% if form.email.errors %}
+        {{form.email()}}
+        <div class="alert">
+          {% for error in form.email.errors %}
+          <span>{{ error }}</span>
+          {% endfor %}
+        </div>
+        {% else %}
+        {{form.email(placeholder="Email address")}}
+        {% endif %}
+      </div>
+      
+      <div>
+        {% if form.password.errors %}
+        {{form.password()}}
+        <div class="alert">
+          {% for error in form.password.errors %}
+          <span>{{error}}</span>
+          {% endfor %}
+        </div>
+        {% else %}
+        {{form.password(placeholder="Password")}}
+        {% endif %}
+      </div>
+      
+      <div>
+        {% if form.password_confirm.errors %}
+        {{form.password_confirm()}}
+        <div class="alert">
+          {% for error in form.password_confirm.errors %}
+          <span>{{error}}</span>
+          {% endfor %}
+        </div>
+        {% else %}
+        {{form.password_confirm(placeholder="Confirm password")}}
+        {% endif %}
+      </div>
+    
+      <div>
+      {{form.submit()}}
+      </div>
+      
+    </fieldset>
+  </form>
+</div>
+{% endblock content %}
