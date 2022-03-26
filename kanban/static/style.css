@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap');
+
+body {
+  background: #0c0221e7;
+  font-family: "Fredoka";
+  color: #ffffff;
+  font-size: 18px;
+  width: 100%;
+  margin: 10px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.container {
+  padding: 0;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.cardtitle {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border-radius: 20px 20px 0 0;
+  display: block;
+}
+
+.column {
+  width: -webkit-fill-available;
+  margin: 10px;
+}
+
+.card {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border-radius: 0 0 20px 20px;
+  height: fit-content;
+  min-height: 400px;
+}
+
+.addtask {
+  background-image: linear-gradient(to bottom right, #16222A, #3A6073);
+}
+
+.todo {
+  background-image: linear-gradient(to bottom right, #757f9a, #d7dde8);
+}
+
+.inprogress {
+  background-image: linear-gradient(to bottom right, #24c6dc, #514a9d);
+}
+
+.completed {
+  background-image: linear-gradient(to bottom right, #1D976C 0%, #93F9B9);  
+}
+
+.delete {
+  background-image: linear-gradient(to bottom right, #da2f43, #f45c43);
+}
+
+.task {
+  padding: 10px;
+  background-color:  #ffffff20;
+  border-radius: 10px;
+  margin: 5px;
+  float:left;
+  width: -webkit-fill-available;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* dropdown button styling */
+.dropbtn {
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffffe0;
+  text-align: left;
+}
+
+.dropbtn:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.options {
+  background-color: transparent;
+  font-size: 14px;
+  border: none;
+  margin-left: 5px;
+  text-shadow: 1px 1px 14px black;
+}
+
+.item {
+  position: relative;
+  display: inline-block;
+}
+
+.item:hover .dropbtn-task {
+  background-color: rgb(168, 162, 162);
+}
+
+.options-list {
+  display: none;
+  position: absolute;
+  background-color: #000000aa;
+  z-index: 99;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.addtask, .todo, .inprogress, .completed, .delete {
+  color: #fff;
+  padding: 12px;
+  margin: 6px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.desc-content {
+  min-width: 220px;
+  word-break: break-word;
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  z-index: 99;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border-radius: 10px;
+}
+
+.desc-content p {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  border-radius: 20px;
+}
+
+.options-list a:hover {
+  background-color: #ddd;
+}
+
+.item:hover .options-list {
+  display: block;
+}
+
+.item:hover .description-content {
+  display: block;
+}
+
+/* text alerts for error and updates */
+.alert {
+  background-color: lightcoral;
+  margin: 16px 4px 0px 16px;
+  padding: 10px;
+  color: white;
+  width: fit-content;
+  border-radius: 10px;
+}
+
+/* forms */
+input, header a {
+  width: -webkit-fill-available;
+  padding: 10px;
+  border: none;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #ffffffc4;
+}
+
+header a {
+  background-color: #461567;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+input[type="submit"] {
+  background-color: #1d87dd;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+fieldset {
+  width: 25%;
+  border: none;
+}
+
+/* adjust for smaller screens like mobile */
+@media (max-width: 850px) {
+  .container {
+    flex-direction: column;
+  }
+}
