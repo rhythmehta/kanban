@@ -1,16 +1,24 @@
 # Kanban Board
+###### To help you improve productivity, break down big tasks into smaller tractable components and visualize them on this project management tool. 
+
 Launch App: https://cs162-kanban.herokuapp.com/
 
-Keywords: Python, Flask, SQL, WTForms, HTML, CSS, bcrypt, Heroku
+Keywords: Python, Flask, SQL, WTForms, HTML, CSS, bcrypt, Heroku;
 
 Features:
 - [x] Signup/Login with password encryption
 - [x] Add Task (including Task Title, Task Description, Due Date)
 - [x] Delete or Move Tasks in Kanban Board
+- [x] Responsive web design, compatible with PC/Mobile
+
+Features coming soon:
+- [x] Forgot/Reset password
+- [x] Create multiple kanban boards (for work, school, etc.)
+- [x] and more... 
 
 # Run locally
 1. Clone repo
-2. Load Terminal from root directory
+2. Load Terminal from root directory, and type following commands
 3. Create and activate virtual environment
 ```console
 name@Desktop/kanban ~ % python3 -m venv .venv
