@@ -145,7 +145,7 @@ body {
   display: block;
 }
 
-.item:hover .description-content {
+.item:hover .desc-content {
   display: block;
 }
 
