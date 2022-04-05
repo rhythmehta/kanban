@@ -68,6 +68,7 @@ name@Desktop/kanban ~ % source .venv/bin/activate
 ![image](https://user-images.githubusercontent.com/40776621/161511442-260ef371-a8e2-4674-af36-595b50b7eb31.png)
 
 # References
+- Marcelomd. (2014). flask-wtf-login-example. Retreived from https://github.com/marcelomd/flask-wtf-login-example
 - Pretty Printed YouTube Channel. (2017). "Creating a Todo List App With Flask and Flask-SQLAlchemy". Retreived from https://youtu.be/4kD-GRF5VPs and https://github.com/PrettyPrinted/youtube_video_code/tree/master/2017/09/27/Creating%20a%20Todo%20List%20App%20With%20Flask%20and%20Flask-SQLAlchemy
 - Pretty Printed YouTube Channel. (2017). "Build a User Login System With Flask-Login, Flask-WTForms, Flask-Bootstrap, and Flask-SQLAlchemy". Retreived from https://youtu.be/8aTnmsDMldY and https://github.com/PrettyPrinted/youtube_video_code/tree/master/2017/09/27/Creating%20a%20Todo%20List%20App%20With%20Flask%20and%20Flask-SQLAlchemy
-- Marcelomd. (2014). flask-wtf-login-example. Retreived from https://github.com/marcelomd/flask-wtf-login-example
+- Rithm School. Password Hashing with Bcrypt in Flask. Retreived from https://www.rithmschool.com/courses/intermediate-flask/hashing-passwords-flask
